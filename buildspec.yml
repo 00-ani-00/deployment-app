@@ -6,10 +6,13 @@ phases:
      - echo Installating NGINX
      - sudo apt-get update
      - sudo apt-get install nginx -y
+     - sudo apt-get install unzip -y
   build:
     commands:
      - echo build started on `date`
-     - cp index.html /var/www/html/
+     - wget https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip
+     - unzip oxer.zip
+     - cp oxer-html/* /var/www/html/
   post_build:
    commands:
      - echo configuring NGINX

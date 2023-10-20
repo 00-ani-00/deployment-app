@@ -10,9 +10,6 @@ phases:
   build:
     commands:
      - echo build started on `date`
-     - cd /home
-     - wget https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip
-     - unzip oxer.zip
      - cp oxer-html/* /var/www/html/
   post_build:
    commands:
